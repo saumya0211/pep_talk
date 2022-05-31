@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "569488871556",
+    "project_id": "pep-talk-50467",
+    "storage_bucket": "pep-talk-50467.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:569488871556:android:e73d8967ab2fa58942b2d1",
+        "android_client_info": {
+          "package_name": "com.example.pep_talk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "569488871556-kj5hh59hcfdamabuj0f3gf3c5fkev2o4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBr0--GAt-OwEAa3SFyDC4U_mvBZK-9_E8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "569488871556-kj5hh59hcfdamabuj0f3gf3c5fkev2o4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
