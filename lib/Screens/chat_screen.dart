@@ -18,7 +18,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
   TextEditingController _controller = TextEditingController();
   final _auth = FirebaseAuth.instance;
-  late User LoggedInUser;
+  User ? LoggedInUser;
   late String MessageText;
   bool emojiShowing = false;
   FocusNode focusNode = FocusNode();
@@ -56,6 +56,8 @@ class _ChatScreenState extends State<ChatScreen> {
         setState(() {
           LoggedInUser = CurrentUser;
         });
+      }else{
+        LoggedInUser = null;
       }
     }catch(e){
       print(e);
@@ -84,7 +86,7 @@ class _ChatScreenState extends State<ChatScreen> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
 
-            StreamListView(LoggedInUser.email),
+            StreamListView(LoggedInUser!.phoneNumber),
             Container(
               decoration: kMessageContainerDecoration,
               child: Row(
@@ -121,7 +123,7 @@ class _ChatScreenState extends State<ChatScreen> {
                     onPressed: () {
                       //Implement send functionality.
                       _firestore.collection('messages').add({
-                        'sender': LoggedInUser.email,
+                        'sender': LoggedInUser!.phoneNumber,
                         'text' : MessageText,
                         'timestamp': FieldValue.serverTimestamp(),
                       });
@@ -146,7 +148,6 @@ class _ChatScreenState extends State<ChatScreen> {
                 onBackspacePressed: _onBackspacePressed,
                 config: Config(
                     columns: 7,
-                    // Issue: https://github.com/flutter/flutter/issues/28894
                     emojiSizeMax: 32 * (Platform.isIOS ? 1.30 : 1.0),
                     verticalSpacing: 0,
                     horizontalSpacing: 0,
@@ -162,9 +163,9 @@ class _ChatScreenState extends State<ChatScreen> {
                     enableSkinTones: true,
                     showRecentsTab: true,
                     recentsLimit: 28,
-                    noRecentsText: 'No Recents',
-                    noRecentsStyle: const TextStyle(
-                        fontSize: 20, color: Colors.black26),
+                    // noRecentsText: 'No Recents',
+                    // noRecentsStyle: const TextStyle(
+                    //     fontSize: 20, color: Colors.black26),
                     tabIndicatorAnimDuration: kTabScrollDuration,
                     categoryIcons: const CategoryIcons(),
                     buttonMode: ButtonMode.MATERIAL)),

@@ -9,7 +9,6 @@ class MessageBubble extends StatelessWidget {
   String Msg;
   String Sender;
   bool isMe;
-  Random random = Random();
 
   @override
   Widget build(BuildContext context) {

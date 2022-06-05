@@ -19,7 +19,7 @@ const kMessageContainerDecoration = BoxDecoration(
 );
 
 InputDecoration KEmailDecoration = InputDecoration(
-  hintText: 'Enter your email',
+  hintText: 'Enter your OTP',
   contentPadding:
   EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
   border: OutlineInputBorder(
@@ -38,7 +38,7 @@ InputDecoration KEmailDecoration = InputDecoration(
 );
 
 InputDecoration KPasswordDecoration = InputDecoration(
-  hintText: 'Enter your password.',
+  hintText: 'Enter your PhoneNumber.',
   contentPadding:
   EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
   border: OutlineInputBorder(

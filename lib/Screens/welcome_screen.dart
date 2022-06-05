@@ -56,7 +56,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with TickerProviderStateM
                   boxWidth: 300,
                   boxBackgroundColor: Colors.white,
                   waveColor: Colors.amber.shade700,
-                  text: 'Flash Chat',
+                  text: 'Vid Go',
                   textStyle: TextStyle(
                     color: Colors.black54,
                     fontSize: 45.0,
@@ -68,15 +68,15 @@ class _WelcomeScreenState extends State<WelcomeScreen> with TickerProviderStateM
             SizedBox(
               height: 48.0,
             ),
-            NavButton(
-              c: Colors.lightBlueAccent,
-              v: (){Navigator.pushNamed(context, LoginScreen.id);},
-              s: 'Log In',),
+            // NavButton(
+            //   c: Colors.lightBlueAccent,
+            //   v: (){Navigator.pushNamed(context, LoginScreen.id);},
+            //   s: 'Log In',),
 
             NavButton(
-                c: Colors.blueAccent,
+                c: Colors.brown,
                 v: (){Navigator.pushNamed(context,RegistrationScreen.id);},
-                s: 'Register'),
+                s: 'Log In'),
           ],
         ),
       ),
